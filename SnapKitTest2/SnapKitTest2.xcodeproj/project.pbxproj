@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		029D1C0E7F6E1007B051BCB5 /* Pods_SnapKitTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307C04BDFDE6B8D8C20C2264 /* Pods_SnapKitTest2.framework */; };
+		A4566789261DD6600009B6DD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4566788261DD6600009B6DD /* MainViewModel.swift */; };
+		A4566791261DD8F60009B6DD /* UserCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4566790261DD8F60009B6DD /* UserCredential.swift */; };
+		A4566795261DD9FB0009B6DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4566794261DD9FB0009B6DD /* User.swift */; };
 		A4CBBF71261DB7BE00855077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBBF70261DB7BE00855077 /* AppDelegate.swift */; };
 		A4CBBF75261DB7BE00855077 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CBBF74261DB7BE00855077 /* MainViewController.swift */; };
 		A4CBBF7A261DB7BF00855077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CBBF79261DB7BF00855077 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 		2B92BD8178B6C326F04AE13F /* Pods-SnapKitTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitTest2.release.xcconfig"; path = "Target Support Files/Pods-SnapKitTest2/Pods-SnapKitTest2.release.xcconfig"; sourceTree = "<group>"; };
 		2F15ABE655B97AE7ABB745AA /* Pods-SnapKitTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitTest2.debug.xcconfig"; path = "Target Support Files/Pods-SnapKitTest2/Pods-SnapKitTest2.debug.xcconfig"; sourceTree = "<group>"; };
 		307C04BDFDE6B8D8C20C2264 /* Pods_SnapKitTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapKitTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4566788261DD6600009B6DD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A4566790261DD8F60009B6DD /* UserCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredential.swift; sourceTree = "<group>"; };
+		A4566794261DD9FB0009B6DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A4CBBF6D261DB7BE00855077 /* SnapKitTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CBBF70261DB7BE00855077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4CBBF74261DB7BE00855077 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +52,6 @@
 				2F15ABE655B97AE7ABB745AA /* Pods-SnapKitTest2.debug.xcconfig */,
 				2B92BD8178B6C326F04AE13F /* Pods-SnapKitTest2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				A4CBBF74261DB7BE00855077 /* MainViewController.swift */,
+				A4566788261DD6600009B6DD /* MainViewModel.swift */,
+				A4566790261DD8F60009B6DD /* UserCredential.swift */,
+				A4566794261DD9FB0009B6DD /* User.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -236,7 +244,10 @@
 			files = (
 				A4CBBF75261DB7BE00855077 /* MainViewController.swift in Sources */,
 				A4CBBF71261DB7BE00855077 /* AppDelegate.swift in Sources */,
+				A4566795261DD9FB0009B6DD /* User.swift in Sources */,
 				A4CBBF8E261DB82E00855077 /* BaseViewController.swift in Sources */,
+				A4566789261DD6600009B6DD /* MainViewModel.swift in Sources */,
+				A4566791261DD8F60009B6DD /* UserCredential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
