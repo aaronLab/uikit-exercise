@@ -84,7 +84,7 @@ class MainViewController: UIViewController, BaseViewController {
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
             let y = view.frame.height
-            $0.top.equalTo(y*0.1)
+            $0.top.equalTo(y*0.05)
             $0.centerX.equalTo(view.snp.centerX)
         }
         
@@ -98,8 +98,8 @@ class MainViewController: UIViewController, BaseViewController {
         view.addSubview(textFields)
         textFields.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16)
-            $0.left.equalTo(view.snp.left).offset(16)
-            $0.right.equalTo(view.snp.right).offset(-16)
+            $0.left.equalTo(view.safeAreaLayoutGuide.snp.left).offset(16)
+            $0.right.equalTo(view.safeAreaLayoutGuide.snp.right).offset(-16)
         }
         
         textFields.addArrangedSubview(emailTextField)
