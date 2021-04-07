@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3BC0BADB0087A0B2150FAF83 /* Pods_SnapKitTest1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17472FA4E2AF42ABC178ABB0 /* Pods_SnapKitTest1.framework */; };
 		A44112C6261D74AD002CF31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44112C5261D74AD002CF31D /* AppDelegate.swift */; };
-		A44112C8261D74AD002CF31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44112C7261D74AD002CF31D /* SceneDelegate.swift */; };
 		A44112CA261D74AD002CF31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44112C9261D74AD002CF31D /* ViewController.swift */; };
-		A44112CD261D74AD002CF31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44112CB261D74AD002CF31D /* Main.storyboard */; };
 		A44112CF261D74AE002CF31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44112CE261D74AE002CF31D /* Assets.xcassets */; };
 		A44112D2261D74AE002CF31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44112D0261D74AE002CF31D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,9 +19,7 @@
 		48807312C567588098FF274C /* Pods-SnapKitTest1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitTest1.release.xcconfig"; path = "Target Support Files/Pods-SnapKitTest1/Pods-SnapKitTest1.release.xcconfig"; sourceTree = "<group>"; };
 		A44112C2261D74AD002CF31D /* SnapKitTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44112C5261D74AD002CF31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A44112C7261D74AD002CF31D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A44112C9261D74AD002CF31D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A44112CC261D74AD002CF31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A44112CE261D74AE002CF31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44112D1261D74AE002CF31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A44112D3261D74AE002CF31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +52,6 @@
 				C085AD60EFA8268875E1F998 /* Pods-SnapKitTest1.debug.xcconfig */,
 				48807312C567588098FF274C /* Pods-SnapKitTest1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,9 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A44112C5261D74AD002CF31D /* AppDelegate.swift */,
-				A44112C7261D74AD002CF31D /* SceneDelegate.swift */,
 				A44112C9261D74AD002CF31D /* ViewController.swift */,
-				A44112CB261D74AD002CF31D /* Main.storyboard */,
 				A44112CE261D74AE002CF31D /* Assets.xcassets */,
 				A44112D0261D74AE002CF31D /* LaunchScreen.storyboard */,
 				A44112D3261D74AE002CF31D /* Info.plist */,
@@ -153,7 +146,6 @@
 			files = (
 				A44112D2261D74AE002CF31D /* LaunchScreen.storyboard in Resources */,
 				A44112CF261D74AE002CF31D /* Assets.xcassets in Resources */,
-				A44112CD261D74AD002CF31D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,21 +200,12 @@
 			files = (
 				A44112CA261D74AD002CF31D /* ViewController.swift in Sources */,
 				A44112C6261D74AD002CF31D /* AppDelegate.swift in Sources */,
-				A44112C8261D74AD002CF31D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A44112CB261D74AD002CF31D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A44112CC261D74AD002CF31D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A44112D0261D74AE002CF31D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
