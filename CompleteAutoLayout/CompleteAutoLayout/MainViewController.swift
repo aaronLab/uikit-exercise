@@ -37,6 +37,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn5: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Profile View", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,32 +65,35 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn2)
         stack.addArrangedSubview(btn3)
         stack.addArrangedSubview(btn4)
+        stack.addArrangedSubview(btn5)
         
     }
     
     @objc private func btnPressed(_ sender: UIButton) {
         
-        var vc: UIViewController!
-        
         if sender == btn1 {
-            vc = AnatomyOfConstraints()
+            navigationController?.pushViewController(AnatomyOfConstraints(), animated: true)
         }
         
         if sender == btn2 {
-            vc = IntrinsicContentSize()
+            navigationController?.pushViewController(IntrinsicContentSize(), animated: true)
         }
         
         if sender == btn3 {
-            vc = CHCR()
+            navigationController?.pushViewController(CHCR(), animated: true)
         }
         
         if sender == btn4 {
-            vc = SimpleConstraints()
+            navigationController?.pushViewController(SimpleConstraints(), animated: true)
+        }
+        
+        if sender == btn5 {
+            navigationController?.pushViewController(ProfileView(), animated: true)
         }
         
         else { return }
         
-        navigationController?.pushViewController(vc, animated: true)
+        
         
     }
 
