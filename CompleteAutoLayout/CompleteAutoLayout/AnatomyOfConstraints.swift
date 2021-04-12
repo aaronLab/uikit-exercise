@@ -40,7 +40,9 @@ class AnatomyOfConstraints: UIViewController {
             $0.width.equalTo(leftView.snp.width)
             $0.top.equalTo(leftView.snp.top)
             $0.bottom.equalTo(leftView.snp.bottom)
-            $0.leading.equalTo(leftView.snp.trailing).offset(20)
+            
+            $0.leading.equalTo(leftView.snp.trailing).offset(20).priority(.low)
+            $0.leading.lessThanOrEqualTo(leftView.snp.trailing).offset(100).priority(.high)
         }
     }
     
