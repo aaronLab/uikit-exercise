@@ -1,5 +1,5 @@
 //
-//  VarietySolutions.swift
+//  AnatomyOfConstraints.swift
 //  CompleteAutoLayout
 //
 //  Created by Aaron Lee on 2021/04/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VarietySolutions: UIViewController {
+class AnatomyOfConstraints: UIViewController {
     
     private let leftView: UIView = {
         let view = UIView()
@@ -37,10 +37,10 @@ class VarietySolutions: UIViewController {
         
         rightView.snp.makeConstraints {
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
-            $0.leading.equalTo(leftView.snp.trailing).offset(20)
             $0.width.equalTo(leftView.snp.width)
             $0.top.equalTo(leftView.snp.top)
             $0.bottom.equalTo(leftView.snp.bottom)
+            $0.leading.equalTo(leftView.snp.trailing).offset(20)
         }
     }
     

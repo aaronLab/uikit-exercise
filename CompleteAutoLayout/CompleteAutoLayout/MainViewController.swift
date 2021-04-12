@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
     @objc private func btnPressed(_ sender: UIButton) {
         
         if sender == btn1 {
-            navigationController?.pushViewController(VarietySolutions(), animated: true)
+            navigationController?.pushViewController(AnatomyOfConstraints(), animated: true)
         }
         
     }

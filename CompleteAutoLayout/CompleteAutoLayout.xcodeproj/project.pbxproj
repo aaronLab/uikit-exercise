@@ -12,7 +12,7 @@
 		A4EC7E8526246B3C00F8A43E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E8426246B3C00F8A43E /* MainViewController.swift */; };
 		A4EC7E8A26246B3D00F8A43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EC7E8926246B3D00F8A43E /* Assets.xcassets */; };
 		A4EC7E8D26246B3D00F8A43E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */; };
-		A4EC7E9D26246D3C00F8A43E /* VarietySolutions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E9C26246D3C00F8A43E /* VarietySolutions.swift */; };
+		A4EC7E9D26246D3C00F8A43E /* AnatomyOfConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		A4EC7E8926246B3D00F8A43E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4EC7E8C26246B3D00F8A43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4EC7E8E26246B3D00F8A43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4EC7E9C26246D3C00F8A43E /* VarietySolutions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarietySolutions.swift; sourceTree = "<group>"; };
+		A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnatomyOfConstraints.swift; sourceTree = "<group>"; };
 		D83B5BA17458521AB4C3FCF6 /* Pods-CompleteAutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompleteAutoLayout.release.xcconfig"; path = "Target Support Files/Pods-CompleteAutoLayout/Pods-CompleteAutoLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,7 @@
 			children = (
 				A4EC7E8026246B3B00F8A43E /* AppDelegate.swift */,
 				A4EC7E8426246B3C00F8A43E /* MainViewController.swift */,
-				A4EC7E9C26246D3C00F8A43E /* VarietySolutions.swift */,
+				A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
 				A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */,
 				A4EC7E8E26246B3D00F8A43E /* Info.plist */,
@@ -202,7 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4EC7E8526246B3C00F8A43E /* MainViewController.swift in Sources */,
-				A4EC7E9D26246D3C00F8A43E /* VarietySolutions.swift in Sources */,
+				A4EC7E9D26246D3C00F8A43E /* AnatomyOfConstraints.swift in Sources */,
 				A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
