@@ -30,17 +30,17 @@ class VarietySolutions: UIViewController {
         view.addSubview(rightView)
         
         leftView.snp.makeConstraints {
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
-            $0.trailing.equalTo(rightView.snp.leading).offset(-20)
         }
         
         rightView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
             $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+            $0.leading.equalTo(leftView.snp.trailing).offset(20)
             $0.width.equalTo(leftView.snp.width)
+            $0.top.equalTo(leftView.snp.top)
+            $0.bottom.equalTo(leftView.snp.bottom)
         }
     }
     
