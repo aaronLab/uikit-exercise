@@ -30,6 +30,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn4: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Simple Constraints", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +57,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn1)
         stack.addArrangedSubview(btn2)
         stack.addArrangedSubview(btn3)
+        stack.addArrangedSubview(btn4)
         
     }
     
@@ -68,6 +76,12 @@ class MainViewController: UIViewController {
         if sender == btn3 {
             vc = CHCR()
         }
+        
+        if sender == btn4 {
+            vc = SimpleConstraints()
+        }
+        
+        else { return }
         
         navigationController?.pushViewController(vc, animated: true)
         
