@@ -15,6 +15,7 @@
 		A4EC7E9D26246D3C00F8A43E /* AnatomyOfConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */; };
 		A4EC7EA12624775E00F8A43E /* IntrinsicContentSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA02624775E00F8A43E /* IntrinsicContentSize.swift */; };
 		A4EC7EA426247B4700F8A43E /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA326247B4700F8A43E /* MyView.swift */; };
+		A4EC7EA726247CF100F8A43E /* CHCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA626247CF100F8A43E /* CHCR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnatomyOfConstraints.swift; sourceTree = "<group>"; };
 		A4EC7EA02624775E00F8A43E /* IntrinsicContentSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentSize.swift; sourceTree = "<group>"; };
 		A4EC7EA326247B4700F8A43E /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		A4EC7EA626247CF100F8A43E /* CHCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCR.swift; sourceTree = "<group>"; };
 		D83B5BA17458521AB4C3FCF6 /* Pods-CompleteAutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompleteAutoLayout.release.xcconfig"; path = "Target Support Files/Pods-CompleteAutoLayout/Pods-CompleteAutoLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				A4EC7E8426246B3C00F8A43E /* MainViewController.swift */,
 				A4EC7E9C26246D3C00F8A43E /* AnatomyOfConstraints.swift */,
 				A4EC7EA02624775E00F8A43E /* IntrinsicContentSize.swift */,
+				A4EC7EA626247CF100F8A43E /* CHCR.swift */,
 				A4EC7EA326247B4700F8A43E /* MyView.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
 				A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 				A4EC7EA426247B4700F8A43E /* MyView.swift in Sources */,
 				A4EC7EA12624775E00F8A43E /* IntrinsicContentSize.swift in Sources */,
 				A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */,
+				A4EC7EA726247CF100F8A43E /* CHCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

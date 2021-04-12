@@ -23,6 +23,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn3: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("CHCR", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +49,27 @@ class MainViewController: UIViewController {
         
         stack.addArrangedSubview(btn1)
         stack.addArrangedSubview(btn2)
+        stack.addArrangedSubview(btn3)
         
     }
     
     @objc private func btnPressed(_ sender: UIButton) {
         
+        var vc: UIViewController!
+        
         if sender == btn1 {
-            navigationController?.pushViewController(AnatomyOfConstraints(), animated: true)
+            vc = AnatomyOfConstraints()
         }
         
         if sender == btn2 {
-            navigationController?.pushViewController(IntrinsicContentSize(), animated: true)
+            vc = IntrinsicContentSize()
         }
+        
+        if sender == btn3 {
+            vc = CHCR()
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 
