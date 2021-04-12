@@ -16,6 +16,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn2: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Intrinsic Content Size", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +41,7 @@ class MainViewController: UIViewController {
         }
         
         stack.addArrangedSubview(btn1)
+        stack.addArrangedSubview(btn2)
         
     }
     
@@ -41,6 +49,10 @@ class MainViewController: UIViewController {
         
         if sender == btn1 {
             navigationController?.pushViewController(AnatomyOfConstraints(), animated: true)
+        }
+        
+        if sender == btn2 {
+            navigationController?.pushViewController(IntrinsicContentSize(), animated: true)
         }
         
     }
