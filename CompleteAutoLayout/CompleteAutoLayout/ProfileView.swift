@@ -8,6 +8,32 @@
 import UIKit
 
 class ProfileView: UIViewController {
+    
+    private let container: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.alignment = .fill
+        sv.distribution = .fill
+        sv.spacing = 16
+        return sv
+    }()
+    
+    private let profileStack: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .horizontal
+        sv.distribution = .fill
+        sv.alignment = .fill
+        sv.spacing = 16
+        return sv
+    }()
+    
+    private let profileInfoStack: UIStackView = {
+        let sv = UIStackView()
+        sv.axis = .vertical
+        sv.alignment = .fill
+        sv.distribution = .equalSpacing
+        return sv
+    }()
 
     private let image: UIView = {
         let v = UIView()
@@ -71,43 +97,33 @@ class ProfileView: UIViewController {
 
         title = "Profile"
         view.backgroundColor = .white
-
-        view.addSubview(image)
-        view.addSubview(lb1)
-        view.addSubview(lb2)
-        view.addSubview(lb3)
-        view.addSubview(tv)
-
-        image.snp.makeConstraints {
+        
+        view.addSubview(container)
+        container.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
             $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
+        }
+        
+        container.addArrangedSubview(profileStack)
+        
+        container.addArrangedSubview(tv)
+        
+        profileStack.addArrangedSubview(image)
+        image.snp.makeConstraints {
             $0.width.height.lessThanOrEqualTo(150).priority(.required)
             $0.width.height.equalTo(view.snp.width).multipliedBy(0.3).priority(.high)
         }
         
-        lb1.snp.makeConstraints {
-            $0.top.equalTo(image.snp.top)
-            $0.leading.equalTo(image.snp.trailing).offset(16)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
+        profileStack.addArrangedSubview(profileInfoStack)
+        profileInfoStack.snp.makeConstraints {
+            $0.top.equalTo(profileStack.snp.top)
+            $0.bottom.equalTo(profileStack.snp.bottom)
         }
         
-        lb2.snp.makeConstraints {
-            $0.centerY.equalTo(image.snp.centerY)
-            $0.leading.equalTo(lb1.snp.leading)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
-        }
-        
-        lb3.snp.makeConstraints {
-            $0.bottom.equalTo(image.snp.bottom)
-            $0.leading.equalTo(lb1.snp.leading)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
-        }
-        
-        tv.snp.makeConstraints {
-            $0.top.equalTo(image.snp.bottom).offset(16)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+        for lb in [lb1, lb2, lb3] {
+            profileInfoStack.addArrangedSubview(lb)
         }
         
     }
