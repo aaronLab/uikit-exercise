@@ -19,6 +19,7 @@
 		A4EC7EAA2624811E00F8A43E /* SimpleConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA92624811E00F8A43E /* SimpleConstraints.swift */; };
 		A4EC7EAD262483F000F8A43E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EAC262483F000F8A43E /* ProfileView.swift */; };
 		A4FB6B8B2625C4E200D187FE /* SimpleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6B8A2625C4E200D187FE /* SimpleStackView.swift */; };
+		A4FB6B902625DEFF00D187FE /* ProfileWithStackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6B8F2625DEFF00D187FE /* ProfileWithStackViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A4EC7EA92624811E00F8A43E /* SimpleConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleConstraints.swift; sourceTree = "<group>"; };
 		A4EC7EAC262483F000F8A43E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A4FB6B8A2625C4E200D187FE /* SimpleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStackView.swift; sourceTree = "<group>"; };
+		A4FB6B8F2625DEFF00D187FE /* ProfileWithStackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWithStackViews.swift; sourceTree = "<group>"; };
 		D83B5BA17458521AB4C3FCF6 /* Pods-CompleteAutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompleteAutoLayout.release.xcconfig"; path = "Target Support Files/Pods-CompleteAutoLayout/Pods-CompleteAutoLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				A4EC7EA626247CF100F8A43E /* CHCR.swift */,
 				A4EC7EA92624811E00F8A43E /* SimpleConstraints.swift */,
 				A4EC7EAC262483F000F8A43E /* ProfileView.swift */,
+				A4FB6B8F2625DEFF00D187FE /* ProfileWithStackViews.swift */,
 				A4FB6B8A2625C4E200D187FE /* SimpleStackView.swift */,
 				A4EC7EA326247B4700F8A43E /* MyView.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 				A4EC7EAD262483F000F8A43E /* ProfileView.swift in Sources */,
 				A4EC7EAA2624811E00F8A43E /* SimpleConstraints.swift in Sources */,
 				A4EC7E8526246B3C00F8A43E /* MainViewController.swift in Sources */,
+				A4FB6B902625DEFF00D187FE /* ProfileWithStackViews.swift in Sources */,
 				A4FB6B8B2625C4E200D187FE /* SimpleStackView.swift in Sources */,
 				A4EC7E9D26246D3C00F8A43E /* AnatomyOfConstraints.swift in Sources */,
 				A4EC7EA426247B4700F8A43E /* MyView.swift in Sources */,

@@ -51,6 +51,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn7: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Profile with Stack View", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +81,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn4)
         stack.addArrangedSubview(btn5)
         stack.addArrangedSubview(btn6)
+        stack.addArrangedSubview(btn7)
         
     }
     
@@ -101,6 +109,10 @@ class MainViewController: UIViewController {
         
         if sender == btn6 {
             navigationController?.pushViewController(SimpleStackView(), animated: true)
+        }
+        
+        if sender == btn7 {
+            navigationController?.pushViewController(ProfileWithStackView(), animated: true)
         }
         
         else { return }
