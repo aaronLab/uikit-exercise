@@ -10,6 +10,11 @@ import SnapKit
 
 class MainViewController: UIViewController {
     
+    private let scrollView: UIScrollView = {
+        let s = UIScrollView()
+        return s
+    }()
+    
     private lazy var btn1: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("Variety Solutions", for: .normal)
@@ -58,6 +63,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn8: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Dynamic Stack View", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,14 +77,25 @@ class MainViewController: UIViewController {
         title = "Complete Auto Layout"
         view.backgroundColor = .white
         
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(16)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-16)
+        }
+        
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 16
         
-        view.addSubview(stack)
+        scrollView.addSubview(stack)
         stack.snp.makeConstraints {
-            $0.width.equalTo(view.snp.width).offset(36)
-            $0.center.equalTo(view.snp.center)
+            $0.width.equalTo(scrollView.snp.width)
+            $0.top.equalTo(scrollView.snp.top)
+            $0.bottom.equalTo(scrollView.snp.bottom)
+            $0.leading.equalTo(scrollView.snp.leading)
+            $0.trailing.equalTo(scrollView.snp.trailing)
         }
         
         stack.addArrangedSubview(btn1)
@@ -82,6 +105,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn5)
         stack.addArrangedSubview(btn6)
         stack.addArrangedSubview(btn7)
+        stack.addArrangedSubview(btn8)
         
     }
     
@@ -113,6 +137,10 @@ class MainViewController: UIViewController {
         
         if sender == btn7 {
             navigationController?.pushViewController(ProfileWithStackView(), animated: true)
+        }
+        
+        if sender == btn8 {
+            navigationController?.pushViewController(DynamicStackView(), animated: true)
         }
         
         else { return }
