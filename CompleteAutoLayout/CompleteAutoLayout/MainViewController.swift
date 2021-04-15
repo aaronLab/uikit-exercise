@@ -70,6 +70,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn9: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Working with Scroll View", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,6 +113,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn6)
         stack.addArrangedSubview(btn7)
         stack.addArrangedSubview(btn8)
+        stack.addArrangedSubview(btn9)
         
     }
     
@@ -141,6 +149,10 @@ class MainViewController: UIViewController {
         
         if sender == btn8 {
             navigationController?.pushViewController(DynamicStackView(), animated: true)
+        }
+        
+        if sender == btn9 {
+            navigationController?.pushViewController(WorkingWithScrollView(), animated: true)
         }
         
         else { return }
