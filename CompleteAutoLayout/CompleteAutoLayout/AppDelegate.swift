@@ -25,5 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+}
 
+struct Shared {
+    
+    struct Images {
+        
+        static let sampleImage = UIImage(named: "sampleImage")!
+        
+    }
+    
 }

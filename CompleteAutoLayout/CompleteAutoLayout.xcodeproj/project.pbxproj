@@ -20,6 +20,7 @@
 		A4EC7EA726247CF100F8A43E /* CHCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA626247CF100F8A43E /* CHCR.swift */; };
 		A4EC7EAA2624811E00F8A43E /* SimpleConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EA92624811E00F8A43E /* SimpleConstraints.swift */; };
 		A4EC7EAD262483F000F8A43E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7EAC262483F000F8A43E /* ProfileView.swift */; };
+		A4F390102629B0B100C4E789 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3900F2629B0B100C4E789 /* LogInView.swift */; };
 		A4FB6B8B2625C4E200D187FE /* SimpleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6B8A2625C4E200D187FE /* SimpleStackView.swift */; };
 		A4FB6B902625DEFF00D187FE /* ProfileWithStackViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6B8F2625DEFF00D187FE /* ProfileWithStackViews.swift */; };
 		A4FB6B93262708E800D187FE /* DynamicStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FB6B92262708E800D187FE /* DynamicStackView.swift */; };
@@ -42,6 +43,7 @@
 		A4EC7EA626247CF100F8A43E /* CHCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCR.swift; sourceTree = "<group>"; };
 		A4EC7EA92624811E00F8A43E /* SimpleConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleConstraints.swift; sourceTree = "<group>"; };
 		A4EC7EAC262483F000F8A43E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A4F3900F2629B0B100C4E789 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		A4FB6B8A2625C4E200D187FE /* SimpleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStackView.swift; sourceTree = "<group>"; };
 		A4FB6B8F2625DEFF00D187FE /* ProfileWithStackViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWithStackViews.swift; sourceTree = "<group>"; };
 		A4FB6B92262708E800D187FE /* DynamicStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicStackView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A4FB6B92262708E800D187FE /* DynamicStackView.swift */,
 				A48153F72628508900D1F95C /* WorkingWithScrollView.swift */,
 				A48153FA2628562F00D1F95C /* DynamicScrollView.swift */,
+				A4F3900F2629B0B100C4E789 /* LogInView.swift */,
 				A4EC7EA326247B4700F8A43E /* MyView.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
 				A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 				A4FB6B902625DEFF00D187FE /* ProfileWithStackViews.swift in Sources */,
 				A4FB6B8B2625C4E200D187FE /* SimpleStackView.swift in Sources */,
 				A4EC7E9D26246D3C00F8A43E /* AnatomyOfConstraints.swift in Sources */,
+				A4F390102629B0B100C4E789 /* LogInView.swift in Sources */,
 				A4EC7EA426247B4700F8A43E /* MyView.swift in Sources */,
 				A4EC7EA12624775E00F8A43E /* IntrinsicContentSize.swift in Sources */,
 				A48153F82628508900D1F95C /* WorkingWithScrollView.swift in Sources */,

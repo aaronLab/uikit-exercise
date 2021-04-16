@@ -84,6 +84,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn11: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Log In View", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,6 +129,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn8)
         stack.addArrangedSubview(btn9)
         stack.addArrangedSubview(btn10)
+        stack.addArrangedSubview(btn11)
         
     }
     
@@ -165,6 +173,10 @@ class MainViewController: UIViewController {
         
         if sender == btn10 {
             navigationController?.pushViewController(DynamicScrollView(), animated: true)
+        }
+        
+        if sender == btn11 {
+            navigationController?.pushViewController(LogInView(), animated: true)
         }
         
         else { return }

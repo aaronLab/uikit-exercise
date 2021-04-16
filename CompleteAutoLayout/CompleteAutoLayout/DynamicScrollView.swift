@@ -99,14 +99,14 @@ class DynamicScrollView: UIViewController {
         if sender == btnAdd {
             let lb = UILabel()
             lb.text = """
-            Hello World
-            Hello World
-            Hello World
-            Hello World
-            Hello World
-            Hello World
-            Hello World
-            Hello World
+            Hello World 1
+            Hello World 2
+            Hello World 3
+            Hello World 4
+            Hello World 5
+            Hello World 6
+            Hello World 7
+            Hello World 8
             """
             lb.backgroundColor = .black
             lb.textColor = .white
