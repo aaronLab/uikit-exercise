@@ -53,6 +53,7 @@ class LogInView: UIViewController {
         tf.textContentType = .emailAddress
         tf.font = .preferredFont(forTextStyle: .body)
         tf.autocapitalizationType = .none
+        tf.autocorrectionType = .no
         return tf
     }()
     
