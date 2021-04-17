@@ -113,5 +113,9 @@ class TableViewCell: UITableViewCell {
         stack.addArrangedSubview(lbTitle)
         stack.addArrangedSubview(lbDescription)
     }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
 
 }
