@@ -40,19 +40,21 @@ extension TableViewCells: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TableViewCell else {
-            fatalError("TableViewCell not found.")
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
+        guard let customCell = cell as? TableViewCell else {
+            return cell
         }
-        cell.lbTitle.text = indexPath.description
-        cell.lbDescription.text = """
+        customCell.lbTitle.text = indexPath.description
+        customCell.lbDescription.text = """
                                     This is \(indexPath.row) cell.
                                     This is the second line.
                                     This is my custom cell.
                                     This was made programmatically.
                                     \(Int.random(in: 0...1000000)) is a random integer.
                                     """
-        cell.imgView.image = UIImage(named: "sampleImage\(indexPath.row % 3)")
-        return cell
+        customCell.imgView.image = UIImage(named: "sampleImage\(indexPath.row % 3)")
+        return customCell
     }
 
 
@@ -108,6 +110,7 @@ class TableViewCell: UITableViewCell {
             $0.top.equalTo(contentView.snp.top).offset(8)
             $0.trailing.equalTo(contentView.snp.trailing).offset(-8)
             $0.bottom.equalTo(contentView.snp.bottom).offset(-8)
+            $0.bottom.lessThanOrEqualTo(contentView.snp.bottom)
         }
 
         stack.addArrangedSubview(lbTitle)
