@@ -31,7 +31,9 @@ struct Shared {
     
     struct Images {
         
-        static let sampleImage = UIImage(named: "sampleImage")!
+        static let sampleImage0 = UIImage(named: "sampleImage0")!
+        static let sampleImage1 = UIImage(named: "sampleImage1")!
+        static let sampleImage2 = UIImage(named: "sampleImage2")!
         
     }
     

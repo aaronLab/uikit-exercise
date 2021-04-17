@@ -10,6 +10,7 @@
 		9704334BB286E0FDDA382AEF /* Pods_CompleteAutoLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E3ACE9A38B10D47607FDCB /* Pods_CompleteAutoLayout.framework */; };
 		A48153F82628508900D1F95C /* WorkingWithScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48153F72628508900D1F95C /* WorkingWithScrollView.swift */; };
 		A48153FB2628562F00D1F95C /* DynamicScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48153FA2628562F00D1F95C /* DynamicScrollView.swift */; };
+		A4CDC308262A881600DB1587 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDC307262A881600DB1587 /* TableViewCells.swift */; };
 		A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E8026246B3B00F8A43E /* AppDelegate.swift */; };
 		A4EC7E8526246B3C00F8A43E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E8426246B3C00F8A43E /* MainViewController.swift */; };
 		A4EC7E8A26246B3D00F8A43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4EC7E8926246B3D00F8A43E /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		8C7C095AFC26C625834BBFEC /* Pods-CompleteAutoLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CompleteAutoLayout.debug.xcconfig"; path = "Target Support Files/Pods-CompleteAutoLayout/Pods-CompleteAutoLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		A48153F72628508900D1F95C /* WorkingWithScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithScrollView.swift; sourceTree = "<group>"; };
 		A48153FA2628562F00D1F95C /* DynamicScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollView.swift; sourceTree = "<group>"; };
+		A4CDC307262A881600DB1587 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		A4EC7E7D26246B3B00F8A43E /* CompleteAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompleteAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EC7E8026246B3B00F8A43E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4EC7E8426246B3C00F8A43E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A48153F72628508900D1F95C /* WorkingWithScrollView.swift */,
 				A48153FA2628562F00D1F95C /* DynamicScrollView.swift */,
 				A4F3900F2629B0B100C4E789 /* LogInView.swift */,
+				A4CDC307262A881600DB1587 /* TableViewCells.swift */,
 				A4EC7EA326247B4700F8A43E /* MyView.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
 				A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */,
@@ -247,6 +250,7 @@
 				A4EC7EA12624775E00F8A43E /* IntrinsicContentSize.swift in Sources */,
 				A48153F82628508900D1F95C /* WorkingWithScrollView.swift in Sources */,
 				A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */,
+				A4CDC308262A881600DB1587 /* TableViewCells.swift in Sources */,
 				A4EC7EA726247CF100F8A43E /* CHCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

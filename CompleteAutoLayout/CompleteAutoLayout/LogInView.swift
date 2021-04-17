@@ -31,7 +31,7 @@ class LogInView: UIViewController {
     }()
     
     private let ivSymbol: UIImageView = {
-        let iv = UIImageView(image: Shared.Images.sampleImage)
+        let iv = UIImageView(image: Shared.Images.sampleImage0)
         iv.contentMode = .scaleAspectFit
         return iv
     }()

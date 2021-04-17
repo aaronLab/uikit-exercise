@@ -91,6 +91,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn12: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Table View Cells", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +137,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn9)
         stack.addArrangedSubview(btn10)
         stack.addArrangedSubview(btn11)
+        stack.addArrangedSubview(btn12)
         
     }
     
@@ -177,6 +185,10 @@ class MainViewController: UIViewController {
         
         if sender == btn11 {
             navigationController?.pushViewController(LogInView(), animated: true)
+        }
+        
+        if sender == btn12 {
+            navigationController?.pushViewController(TableViewCells(), animated: true)
         }
         
         else { return }
