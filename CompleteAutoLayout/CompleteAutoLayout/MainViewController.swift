@@ -108,7 +108,7 @@ class MainViewController: UIViewController {
     
     private lazy var btn14: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("Social Media Table", for: .normal)
+        btn.setTitle("Messaging", for: .normal)
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
@@ -212,7 +212,7 @@ class MainViewController: UIViewController {
         }
         
         if sender == btn14 {
-            navigationController?.pushViewController(SocialMediaTable(), animated: true)
+            navigationController?.pushViewController(Messaging(), animated: true)
         }
         
         else { return }

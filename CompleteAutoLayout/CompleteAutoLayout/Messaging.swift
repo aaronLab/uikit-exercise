@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SocialMediaTable: UIViewController {
+class Messaging: UIViewController {
     
     private weak var tableView: UITableView!
     
