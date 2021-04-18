@@ -9,6 +9,8 @@ import UIKit
 
 class SocialMediaTable: UIViewController {
     
+    private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
