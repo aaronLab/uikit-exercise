@@ -98,6 +98,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn13: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Floating Buttons", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -138,6 +145,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn10)
         stack.addArrangedSubview(btn11)
         stack.addArrangedSubview(btn12)
+        stack.addArrangedSubview(btn13)
         
     }
     
@@ -189,6 +197,10 @@ class MainViewController: UIViewController {
         
         if sender == btn12 {
             navigationController?.pushViewController(TableViewCells(), animated: true)
+        }
+        
+        if sender == btn13 {
+            navigationController?.pushViewController(FloatingButtons(), animated: true)
         }
         
         else { return }

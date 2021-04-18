@@ -141,7 +141,7 @@ class TableViewCell: UITableViewCell {
             return
         }
         
-        height.isActive = !height.isActive
+        height.isActive.toggle()
         
         NotificationCenter.default.post(name: NSNotification.Name("layoutCell"),
                                         object: nil)
