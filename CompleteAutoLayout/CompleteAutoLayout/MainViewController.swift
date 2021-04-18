@@ -105,6 +105,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn14: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Social Media Table", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +153,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn11)
         stack.addArrangedSubview(btn12)
         stack.addArrangedSubview(btn13)
+        stack.addArrangedSubview(btn14)
         
     }
     
@@ -201,6 +209,10 @@ class MainViewController: UIViewController {
         
         if sender == btn13 {
             navigationController?.pushViewController(FloatingButtons(), animated: true)
+        }
+        
+        if sender == btn14 {
+            navigationController?.pushViewController(SocialMediaTable(), animated: true)
         }
         
         else { return }
