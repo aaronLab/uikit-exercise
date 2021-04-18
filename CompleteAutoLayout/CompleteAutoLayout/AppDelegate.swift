@@ -44,6 +44,8 @@ struct Shared {
         static let portrait2 = UIImage(named: "portrait2")!
         static let portrait3 = UIImage(named: "portrait3")!
         static let portrait4 = UIImage(named: "portrait4")!
+        static let bubbleLeft = UIImage(named: "bubble_left")!
+        static let bubbleRight = UIImage(named: "bubble_right")!
         
     }
     
