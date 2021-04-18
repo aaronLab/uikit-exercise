@@ -5,6 +5,7 @@
 // 
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     private var tableView: UITableView!
@@ -14,6 +15,13 @@ class ViewController: UIViewController {
         configureNavigationBar()
         addTable()
         configureTable()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("NeedsUpdateLayout"),
+                                               object: nil,
+                                               queue: nil) { noti in
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
     }
     
     private func configureNavigationBar() {
@@ -35,13 +43,13 @@ class ViewController: UIViewController {
     
     private func addTable() {
         tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.automaticallyAdjustsScrollIndicatorInsets = true
         view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(view.snp.top)
+            $0.bottom.equalTo(view.snp.bottom)
+            $0.leading.equalTo(view.snp.leading)
+            $0.trailing.equalTo(view.snp.trailing)
+        }
     }
     
     private func configureTable() {
