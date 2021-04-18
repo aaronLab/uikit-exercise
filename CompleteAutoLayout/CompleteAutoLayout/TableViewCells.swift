@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 fileprivate let cellIdentifier = "cell"
 
@@ -15,6 +16,13 @@ class TableViewCells: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("layoutCell"),
+                                               object: nil,
+                                               queue: .main) { noti in
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
 
         title = "Table View Cells"
         view.backgroundColor = .white
@@ -80,6 +88,8 @@ class TableViewCell: UITableViewCell {
         lb.numberOfLines = 0
         return lb
     }()
+    
+    private var descriptionHeight: Constraint!
 
     override init(style: UITableViewCell.CellStyle = .subtitle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -110,11 +120,32 @@ class TableViewCell: UITableViewCell {
             $0.top.equalTo(contentView.snp.top).offset(8)
             $0.trailing.equalTo(contentView.snp.trailing).offset(-8)
             $0.bottom.equalTo(contentView.snp.bottom).offset(-8)
-            $0.bottom.lessThanOrEqualTo(contentView.snp.bottom)
+            
+            descriptionHeight = $0.height
+                .lessThanOrEqualTo(50+16)
+                .constraint
         }
 
         stack.addArrangedSubview(lbTitle)
         stack.addArrangedSubview(lbDescription)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleDescription))
+        descriptionHeight.activate()
+        lbDescription.addGestureRecognizer(tapGesture)
+        lbDescription.isUserInteractionEnabled = true
+    }
+    
+    @objc private func toggleDescription() {
+        
+        guard let height = descriptionHeight else {
+            return
+        }
+        
+        height.isActive = !height.isActive
+        
+        NotificationCenter.default.post(name: NSNotification.Name("layoutCell"),
+                                        object: nil)
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
