@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C7FAE31125174ED800152EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FAE31025174ED800152EB6 /* AppDelegate.swift */; };
-		C7FAE31325174ED800152EB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FAE31225174ED800152EB6 /* SceneDelegate.swift */; };
 		C7FAE31525174ED800152EB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FAE31425174ED800152EB6 /* ViewController.swift */; };
-		C7FAE31825174ED800152EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FAE31625174ED800152EB6 /* Main.storyboard */; };
 		C7FAE31A25174ED900152EB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FAE31925174ED900152EB6 /* Assets.xcassets */; };
 		C7FAE31D25174ED900152EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7FAE31B25174ED900152EB6 /* LaunchScreen.storyboard */; };
 		C7FAE327251757A800152EB6 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FAE326251757A800152EB6 /* FeedTableViewCell.swift */; };
@@ -23,9 +21,7 @@
 		4629463B2E4D9C0232F91AF4 /* Pods-SocialCell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialCell.debug.xcconfig"; path = "Target Support Files/Pods-SocialCell/Pods-SocialCell.debug.xcconfig"; sourceTree = "<group>"; };
 		C7FAE30D25174ED800152EB6 /* SocialCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FAE31025174ED800152EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7FAE31225174ED800152EB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C7FAE31425174ED800152EB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C7FAE31725174ED800152EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7FAE31925174ED900152EB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FAE31C25174ED900152EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7FAE31E25174ED900152EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +48,6 @@
 				4629463B2E4D9C0232F91AF4 /* Pods-SocialCell.debug.xcconfig */,
 				24414EE4BD508B81F06BB684 /* Pods-SocialCell.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,11 +73,9 @@
 			isa = PBXGroup;
 			children = (
 				C7FAE31025174ED800152EB6 /* AppDelegate.swift */,
-				C7FAE31225174ED800152EB6 /* SceneDelegate.swift */,
 				C7FAE31425174ED800152EB6 /* ViewController.swift */,
 				C7FAE326251757A800152EB6 /* FeedTableViewCell.swift */,
 				C7FAE32925175A7400152EB6 /* Feed.swift */,
-				C7FAE31625174ED800152EB6 /* Main.storyboard */,
 				C7FAE31925174ED900152EB6 /* Assets.xcassets */,
 				C7FAE31B25174ED900152EB6 /* LaunchScreen.storyboard */,
 				C7FAE31E25174ED900152EB6 /* Info.plist */,
@@ -159,7 +152,6 @@
 			files = (
 				C7FAE31D25174ED900152EB6 /* LaunchScreen.storyboard in Resources */,
 				C7FAE31A25174ED900152EB6 /* Assets.xcassets in Resources */,
-				C7FAE31825174ED800152EB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,21 +208,12 @@
 				C7FAE32A25175A7400152EB6 /* Feed.swift in Sources */,
 				C7FAE327251757A800152EB6 /* FeedTableViewCell.swift in Sources */,
 				C7FAE31125174ED800152EB6 /* AppDelegate.swift in Sources */,
-				C7FAE31325174ED800152EB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C7FAE31625174ED800152EB6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7FAE31725174ED800152EB6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7FAE31B25174ED900152EB6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

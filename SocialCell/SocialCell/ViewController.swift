@@ -16,6 +16,23 @@ class ViewController: UIViewController {
         configureTable()
     }
     
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.barTintColor = .systemBlue
+        navigationController?.navigationBar.tintColor = .white
+        
+        let searchBar: UISearchBar = UISearchBar()
+        searchBar.placeholder = "검색"
+        searchBar.searchTextField.backgroundColor = .white
+        
+        navigationItem.titleView = searchBar
+        
+        let cameraButton = UIBarButtonItem(systemItem: .camera)
+        let shareButton = UIBarButtonItem(systemItem: .action)
+        
+        navigationItem.leftBarButtonItem = cameraButton
+        navigationItem.rightBarButtonItem = shareButton
+    }
+    
     private func addTable() {
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,22 +54,6 @@ class ViewController: UIViewController {
         tableView.separatorInset = .zero
     }
     
-    private func configureNavigationBar() {
-        navigationController?.navigationBar.barTintColor = .systemBlue
-        navigationController?.navigationBar.tintColor = .white
-        
-        let searchBar: UISearchBar = UISearchBar()
-        searchBar.placeholder = "검색"
-        searchBar.searchTextField.backgroundColor = .white
-        
-        navigationItem.titleView = searchBar
-        
-        let cameraButton = UIBarButtonItem(systemItem: .camera)
-        let shareButton = UIBarButtonItem(systemItem: .action)
-        
-        navigationItem.leftBarButtonItem = cameraButton
-        navigationItem.rightBarButtonItem = shareButton
-    }
 }
 
 extension ViewController: UITableViewDataSource {
