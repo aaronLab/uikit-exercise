@@ -27,6 +27,7 @@ class Messaging: UIViewController {
     private let tableView: UITableView = {
         let tb = UITableView()
         tb.separatorStyle = .none
+        tb.keyboardDismissMode = .onDrag
         return tb
     }()
     
@@ -54,14 +55,25 @@ class Messaging: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enable = false
         IQKeyboardManager.shared.enableAutoToolbar = false
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         title = "Messaging"
         view.backgroundColor = .white
         
         view.addSubview(textContainer)
+        view.addSubview(tableView)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(8)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
+            $0.bottom.equalTo(textContainer.snp.top).offset(-8)
+        }
+        tableView.register(MessagingCell.self, forCellReuseIdentifier: cellIdentifier)
+        
         textContainer.snp.makeConstraints {
             $0.bottom.equalTo(view.snp.bottom)
             $0.leading.equalTo(view.snp.leading)
@@ -84,18 +96,6 @@ class Messaging: UIViewController {
             $0.centerY.equalTo(textField.snp.centerY)
         }
         
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(8)
-            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
-            $0.bottom.equalTo(textContainer.snp.top).offset(-8)
-        }
-        
-        tableView.register(MessagingCell.self, forCellReuseIdentifier: cellIdentifier)
-        
         sendButton.rx
             .tap
             .bind {
@@ -103,10 +103,15 @@ class Messaging: UIViewController {
                 self.tableView.layoutIfNeeded()
             }
             .disposed(by: bag)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        
+        [UIResponder.keyboardWillShowNotification,
+         UIResponder.keyboardWillHideNotification].forEach { noti in
+            NotificationCenter.default.addObserver(forName: noti,
+                                                   object: nil,
+                                                   queue: .main,
+                                                   using: keyboardWillChange(_:))
+         }
+
     }
     
     private func sendMessage() {
@@ -117,6 +122,7 @@ class Messaging: UIViewController {
         
         let chat = Chat(message: text)
         self.chats.append(chat)
+        self.textField.text = nil
         
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -125,6 +131,26 @@ class Messaging: UIViewController {
             
             let indexPath = IndexPath(row: self.chats.count - 1, section: 0)
             self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+    
+    @objc private func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
+    private func keyboardWillChange(_ noti: Notification) {
+        guard let userInfo = noti.userInfo else { return }
+        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
+        guard let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+        
+        UIView.animate(withDuration: duration) {
+            self.textField.snp.updateConstraints {
+                if noti.name == UIResponder.keyboardWillShowNotification {
+                    $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-(keyboardFrame.height-8))
+                } else {
+                    $0.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-8)
+                }
+            }
         }
     }
     
@@ -163,6 +189,7 @@ class MessagingCell: UITableViewCell {
         didSet {
             messageLabel.text = chat?.message
             configureBubbleConstraints()
+            configureTextConstraints()
         }
     }
     
@@ -183,15 +210,7 @@ class MessagingCell: UITableViewCell {
         selectionStyle = .none
         
         contentView.addSubview(bubbleImageView)
-        configureBubbleConstraints()
-        
         contentView.addSubview(messageLabel)
-        messageLabel.snp.makeConstraints {
-            $0.leading.equalTo(bubbleImageView.snp.leading).offset(8)
-            $0.trailing.equalTo(bubbleImageView.snp.trailing).offset(-8)
-            $0.top.equalTo(bubbleImageView.snp.top).offset(8)
-            $0.bottom.equalTo(bubbleImageView.snp.bottom).offset(-8)
-        }
     }
     
     required init?(coder: NSCoder) {
@@ -203,10 +222,11 @@ class MessagingCell: UITableViewCell {
         
         bubbleImageView.snp.removeConstraints()
         
-        bubbleImageView.image = !chat.isMine ? Shared.Images.bubbleLeft : Shared.Images.bubbleRight
+        let isMine = chat.isMine
+        bubbleImageView.image = !isMine ? Shared.Images.bubbleLeft : Shared.Images.bubbleRight
         
         bubbleImageView.snp.makeConstraints {
-            if !chat.isMine {
+            if !isMine {
                 $0.leading.equalTo(contentView.snp.leading).offset(8)
                 $0.trailing.lessThanOrEqualTo(contentView.snp.trailing).offset(-50)
             } else {
@@ -215,6 +235,19 @@ class MessagingCell: UITableViewCell {
             }
             $0.top.equalTo(contentView.snp.top).offset(8)
             $0.bottom.equalTo(contentView.snp.bottom).offset(-8)
+        }
+        
+        layoutIfNeeded()
+    }
+    
+    private func configureTextConstraints() {
+        messageLabel.snp.removeConstraints()
+        
+        messageLabel.snp.makeConstraints {
+            $0.leading.equalTo(bubbleImageView.snp.leading).offset(16)
+            $0.trailing.equalTo(bubbleImageView.snp.trailing).offset(-16)
+            $0.top.equalTo(bubbleImageView.snp.top).offset(8)
+            $0.bottom.equalTo(bubbleImageView.snp.bottom).offset(-8)
         }
         
         layoutIfNeeded()
