@@ -112,6 +112,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn15: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Bar Graph", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,6 +161,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn12)
         stack.addArrangedSubview(btn13)
         stack.addArrangedSubview(btn14)
+        stack.addArrangedSubview(btn15)
         
     }
     
@@ -213,6 +221,10 @@ class MainViewController: UIViewController {
         
         if sender == btn14 {
             navigationController?.pushViewController(Messaging(), animated: true)
+        }
+        
+        if sender == btn15 {
+            navigationController?.pushViewController(BarGraph(), animated: true)
         }
         
         else { return }
