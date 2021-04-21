@@ -63,7 +63,8 @@ class StickeyImageHeader: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y = -scrollView.contentOffset.y
         
-        let height = max(imageHeight+y, imageHeight)
+        let height = y >= 0 ? max(imageHeight+y, imageHeight) : min(imageHeight+y, imageHeight)
+        
         imageView.snp.updateConstraints {
             $0.height.equalTo(height)
         }
