@@ -13,6 +13,7 @@
 		A48153F82628508900D1F95C /* WorkingWithScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48153F72628508900D1F95C /* WorkingWithScrollView.swift */; };
 		A48153FB2628562F00D1F95C /* DynamicScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48153FA2628562F00D1F95C /* DynamicScrollView.swift */; };
 		A49D2FB8262BF0A80001C486 /* FloatingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D2FB7262BF0A80001C486 /* FloatingButtons.swift */; };
+		A4ADFBC326304F5C00B7FDCF /* StickeyImageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ADFBC226304F5C00B7FDCF /* StickeyImageHeader.swift */; };
 		A4CDC308262A881600DB1587 /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDC307262A881600DB1587 /* TableViewCells.swift */; };
 		A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E8026246B3B00F8A43E /* AppDelegate.swift */; };
 		A4EC7E8526246B3C00F8A43E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EC7E8426246B3C00F8A43E /* MainViewController.swift */; };
@@ -38,6 +39,7 @@
 		A48153F72628508900D1F95C /* WorkingWithScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithScrollView.swift; sourceTree = "<group>"; };
 		A48153FA2628562F00D1F95C /* DynamicScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicScrollView.swift; sourceTree = "<group>"; };
 		A49D2FB7262BF0A80001C486 /* FloatingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtons.swift; sourceTree = "<group>"; };
+		A4ADFBC226304F5C00B7FDCF /* StickeyImageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickeyImageHeader.swift; sourceTree = "<group>"; };
 		A4CDC307262A881600DB1587 /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 		A4EC7E7D26246B3B00F8A43E /* CompleteAutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompleteAutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EC7E8026246B3B00F8A43E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				A49D2FB7262BF0A80001C486 /* FloatingButtons.swift */,
 				A4577E56262C055B00151D79 /* Messaging.swift */,
 				A42B51E0262DB4E9009223C1 /* BarGraph.swift */,
+				A4ADFBC226304F5C00B7FDCF /* StickeyImageHeader.swift */,
 				A4EC7EA326247B4700F8A43E /* MyView.swift */,
 				A4EC7E8926246B3D00F8A43E /* Assets.xcassets */,
 				A4EC7E8B26246B3D00F8A43E /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 				A4EC7EA426247B4700F8A43E /* MyView.swift in Sources */,
 				A4EC7EA12624775E00F8A43E /* IntrinsicContentSize.swift in Sources */,
 				A42B51E1262DB4E9009223C1 /* BarGraph.swift in Sources */,
+				A4ADFBC326304F5C00B7FDCF /* StickeyImageHeader.swift in Sources */,
 				A48153F82628508900D1F95C /* WorkingWithScrollView.swift in Sources */,
 				A4EC7E8126246B3B00F8A43E /* AppDelegate.swift in Sources */,
 				A4577E57262C055B00151D79 /* Messaging.swift in Sources */,

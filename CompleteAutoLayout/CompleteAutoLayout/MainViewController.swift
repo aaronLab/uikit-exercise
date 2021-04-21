@@ -119,6 +119,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn16: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Stickey Image Header", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -162,6 +169,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn13)
         stack.addArrangedSubview(btn14)
         stack.addArrangedSubview(btn15)
+        stack.addArrangedSubview(btn16)
         
     }
     
@@ -225,6 +233,10 @@ class MainViewController: UIViewController {
         
         if sender == btn15 {
             navigationController?.pushViewController(BarGraph(), animated: true)
+        }
+        
+        if sender == btn16 {
+            navigationController?.pushViewController(StickeyImageHeader(), animated: true)
         }
         
         else { return }
