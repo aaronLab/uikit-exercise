@@ -7,12 +7,14 @@ PODS:
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
   - SnapKit (5.0.1)
+  - StickyScrollView (0.1.6)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
   - RxCocoa
   - RxSwift
   - SnapKit
+  - StickyScrollView
 
 SPEC REPOS:
   trunk:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - StickyScrollView
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  StickyScrollView: f5ab16318861a47cab1e6fe548d09e6f547b65ce
 
-PODFILE CHECKSUM: dc5e522606c0ab8c37383c11ad77fab85550d51d
+PODFILE CHECKSUM: 549ffda0f47684baf6ef05852498e6dcf9c90c6f
 
 COCOAPODS: 1.10.1
