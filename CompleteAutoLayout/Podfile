@@ -10,5 +10,6 @@ target 'CompleteAutoLayout' do
   pod 'IQKeyboardManagerSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'StickyScrollView'
 
 end
