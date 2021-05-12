@@ -122,7 +122,28 @@ class MainViewController: UIViewController {
     
     private lazy var btn16: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("Stickey Image Header", for: .normal)
+        btn.setTitle("Sticky Image Header", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
+    
+    private lazy var btn17: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Sticky Title Header", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
+    
+    private lazy var btn18: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Sticky Image Header 2", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
+    
+    private lazy var btn19: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Sticky Image Header 3", for: .normal)
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
@@ -170,6 +191,9 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn14)
         stack.addArrangedSubview(btn15)
         stack.addArrangedSubview(btn16)
+        stack.addArrangedSubview(btn17)
+        stack.addArrangedSubview(btn18)
+        stack.addArrangedSubview(btn19)
         
     }
     
@@ -236,7 +260,19 @@ class MainViewController: UIViewController {
         }
         
         if sender == btn16 {
-            navigationController?.pushViewController(StickeyImageHeader(), animated: true)
+            navigationController?.pushViewController(StickyImageHeader(), animated: true)
+        }
+        
+        if sender == btn17 {
+            navigationController?.pushViewController(StickyTitleHeader(), animated: true)
+        }
+        
+        if sender == btn18 {
+            navigationController?.pushViewController(StickyImageHeader2(), animated: true)
+        }
+        
+        if sender == btn19 {
+            navigationController?.pushViewController(StickyImageHeader3(), animated: true)
         }
         
         else { return }
