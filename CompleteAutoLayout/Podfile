@@ -11,5 +11,6 @@ target 'CompleteAutoLayout' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'StickyScrollView'
+  pod 'VersaPlayer'
 
 end

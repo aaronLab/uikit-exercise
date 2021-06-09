@@ -147,6 +147,13 @@ class MainViewController: UIViewController {
         btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
         return btn
     }()
+    
+    private lazy var btn20: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("Player Test", for: .normal)
+        btn.addTarget(self, action: #selector(btnPressed(_:)), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,6 +201,7 @@ class MainViewController: UIViewController {
         stack.addArrangedSubview(btn17)
         stack.addArrangedSubview(btn18)
         stack.addArrangedSubview(btn19)
+        stack.addArrangedSubview(btn20)
         
     }
     
@@ -273,6 +281,10 @@ class MainViewController: UIViewController {
         
         if sender == btn19 {
             navigationController?.pushViewController(StickyImageHeader3(), animated: true)
+        }
+        
+        if sender == btn20 {
+            navigationController?.pushViewController(PlayerViewController(), animated: true)
         }
         
         else { return }
